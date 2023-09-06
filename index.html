@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-
-<script>//Click Submit Function
-document.addEventListener('DOMContentLoaded', function() {
-document.getElementById("click-this").addEventListener("click", runit);
-});
-
-function runit() {
-  fetch('https://match.adsrvr.org/track/rid?ttd_pid=67jqghy&fmt=json',
-  {method: "GET",
-  'credentials': 'include'})
-  .then(response => response.text())
-  .then(html => {
-    document.getElementById('realtimeid').innerHTML = html;
-   })
-   .then((data) => {
-
-   });
-}
-</script>
-
 <html>
-    <head>
-
-    </head>
-    <body>
-Hello World!
-    </body>
+ <head>
+   <title>TTD Test RealTimeID Tag</title>
+   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+   <meta charset="utf-8">
+   <script src="realtime.js"></script>
+ </head>
+   <style>
+   </style>
+     <body>
+       <div> <h1><font color="33adff">TTD Test Button RID Cookie Match</font></h1>
+​
+       <button type="button"<a id="click-this"><font color="007acc">Fire RID Tag</font></a></button>
+     </div>
+     <div id="realtimeid"></div>
+     </body>
 </html>
